@@ -1,0 +1,148 @@
+:root {
+    --shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: light;
+}
+
+img {
+    width: 40%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
+}
+
+.title {
+    padding: 0.6em;
+    border-bottom: 1px solid rebeccapurple;
+    margin: 2em;
+    text-align: left;
+}
+
+.title_text {
+    color: rebeccapurple;
+}
+
+.inputbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task_input {
+    width: 44%;
+    font-size: 1rem;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.task_input:focus {
+    border-width: 2px;
+    border-color: rebeccapurple;
+}
+
+.add_icon {
+    background-color: rebeccapurple;
+    margin: 1em;
+    padding: 1em;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.add_icon:hover {
+    background-color: rgb(203, 157, 250);
+}
+
+.task_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.added_task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38%;
+    margin: 0.5em;
+}
+
+.task_text {
+    background-color: #FFFDDE;
+    padding: 0.5em;
+    width: 100%;
+    position: relative;
+}
+
+.delete {
+    filter: invert(100%);
+    min-width: 2rem;
+    width: 6%;
+    max-width: 3rem;
+    background-color: seagreen;
+    padding: 0.5em;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.delete:hover {
+    box-shadow: var(--shadow);
+    background-color: red;
+    filter: invert(0);
+}
+
+.task_text:hover::before {
+    content: "";
+    background-color: blue;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+}
+
+@media (max-width:620px) {
+    .container {
+        padding: 0;
+    }
+    .title_text {
+        font-size: 2.5rem;
+    }
+    .title {
+        margin-bottom: 0.5em;
+    }
+    .task_input {
+        width: 65%;
+    }
+    .added_task {
+        width: 67%;
+    }
+    .inputbox {
+        padding: 0.5em;
+    }
+}
