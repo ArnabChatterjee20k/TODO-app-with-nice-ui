@@ -55,9 +55,11 @@ class Todo {
     retrieve_from_storage() {
         let key = this.storage;
         let data_stored = JSON.parse(localStorage.getItem(key));
-        data_stored.forEach(element => {
-            this.show({ value: element })
-        })
+        if (data_stored) {
+            data_stored.forEach(element => {
+                this.show({ value: element })
+            })
+        }
     }
 
     delete_from_storage(id) {
