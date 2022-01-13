@@ -1,7 +1,7 @@
 
-# Project Title
+# TODO
 
-A brief description of what this project does and who it's for
+A simple todo app project for revising js concepts and frontend.
 
 
 ## 🔗 Link
@@ -9,4 +9,3 @@ A brief description of what this project does and who it's for
 ## Screenshots
 
 [To-Do](https://postimg.cc/H80w1jv0)
-
